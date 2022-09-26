@@ -4,7 +4,7 @@ import torchvision.transforms as T
 
 def infer_time(net, path='Images/bird.png', dev='cuda'):
     img = Image.open('Images/bird.png')
-    trf = T.Compose([T.Resize(256), 
+    trf = T.Compose([T.Resize(640), 
                    T.CenterCrop(224), 
                    T.ToTensor(), 
                    T.Normalize(mean = [0.485, 0.456, 0.406], 
